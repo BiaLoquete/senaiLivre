@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="cabecalho.html">
     <link rel="stylesheet" href="login.html">
     <link rel="stylesheet" href="registro.html">
@@ -16,7 +16,7 @@
     <header>
         <div class="headerlogin">
             <div class="img">
-                <img src="img/senai.png" alt="Logo">
+                <img src="../img/senai.png" alt="Logo">
             </div>
             <div class="pesquisa">
                 <input type="text" class="busque" required placeholder="Busque produtos, marcas e muito mais">
@@ -38,7 +38,7 @@
     <main class="prod">
         <section class="descri">
             <div class="frit">
-                <img src="img/fritadeira.png" alt="frit">
+                <img src="../img/fritadeira.png" alt="frit">
             </div>
 
             <div class="des">
@@ -48,10 +48,10 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
                 <br><br>
-                <p><b>R$670,00</b></p>
-                <p class="verclaro">em 10x de R$67,00 sem juros</p>
+                <p id="valor"><b>R$670,00</b></p>
+                <p class="verclaro" id="parc">em 10x de R$67,00 sem juros</p>
                 <p class="verescuro">Frete grátis <span><i class="fa-solid fa-bolt"></i></span></p>
                 <br>
                 <p class="cinza">Potência: 1400W</p>
@@ -63,12 +63,12 @@
                 <p>Adicionar ao carrinho <span><i class="fa-solid fa-cart-plus"></i></span></p>
                 <br>
                 <div class="button-compra">
-                    <button type="button">
-                        <p>-</p>
+                    <button type="button" id="diminuir">
+                        -
                     </button>
-                    <p> 1 </p>
-                    <button type="button">
-                        <p>+</p>
+                    <p id="contador"> 1 </p>
+                    <button type="button" id="aumentar">
+                        +
                     </button>
                 </div>
                 <br><br>
@@ -85,7 +85,7 @@
             </div>
             <div class="flex">
                 <div class="camera">
-                    <img src="img/camera.png" alt="camera" class="c">
+                    <img src="../img/camera.png" alt="camera" class="c">
                     <div class="button-borders">
                         <button class="primary-button">Oferta do dia</button>
                     </div>
@@ -95,7 +95,7 @@
                     <p class="cinza">Câmera fotográfica</p>
                 </div>
                 <div class="laptop">
-                    <img src="img/laptop.png" alt="laptop" class="l">
+                    <img src="../img/laptop.png" alt="laptop" class="l">
                     <div class="button-borders">
                         <button class="primary-button">Oferta do dia</button>
                     </div>
@@ -105,7 +105,7 @@
                     <p class="cinza">LapTop</p>
                 </div>
                 <div class="cadeira">
-                    <img src="img/cadeiraGamer.png" alt="cadeira" class="cg">
+                    <img src="../img/cadeiraGamer.png" alt="cadeira" class="cg">
                     <div class="button-borders">
                         <button class="primary-button">Oferta do dia</button>
                     </div>
@@ -118,6 +118,37 @@
         </section>
         <script src="https://kit.fontawesome.com/0f05c75053.js" crossorigin="anonymous"></script>
     </main>
+<script>
+    let count = 1;
+    const contador = document.getElementById("contador");
+    const aumentarQtd = document.getElementById("aumentar");
+    const diminuirQtd = document.getElementById("diminuir");
+    const valorUn = document.getElementById("valor");
+    const valorParc = document.getElementById("parc");
+
+    function aumenta(){
+        count +=1;
+        calcula();
+    }
+    function diminui(){
+        if(count > 0){
+            count -=1;
+            calcula();
+        }
+    }
+    function calcula(){
+        let valorproduto = 670;
+        const result = count * valorproduto;
+        valorUn.innerHTML = result;
+        valorParc.innerHTML = result / 10
+        contador.innerHTML = count;
+    }
+
+    aumentarQtd.addEventListener("click", aumenta);
+    diminuirQtd.addEventListener("click", diminui);
+    
+
+</script>
     <footer>
         <div class="footer" id="footer">
             <div class="imgfundo">
