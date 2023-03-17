@@ -4,8 +4,14 @@
     transition: all 1s;
     box-sizing: border-box;
 }
+.cadas{
+    text-decoration: none;
+    color: rgb(239, 65, 65); 
+    font-size: 18px;
+}
 .header{ 
-    background-color: #fff159;
+    background: rgb(239,237,111);
+    background: linear-gradient(180deg, rgba(239,237,111,1) 20%, rgba(235,239,167,1) 50%, rgba(250,250,250,1) 77%);
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -55,8 +61,8 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 30px;
-    gap: 30px;
+    padding: 25px;
+    gap: 20px;
 }
  
 .titulo{
@@ -103,13 +109,12 @@ html {
 .ofertas img{
     width: 200px;
 }
-.mais{
+#ofertas .mais{
     text-align: center;
-    text-decoration: none;
 }
 
 .footer{
-    background-color: #fff159;
+    background-color: #f5ea6c;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
     padding: 30px;
@@ -124,7 +129,7 @@ button {
     padding: 10px 15px;
     border-radius: 50px;
     border: 0;
-    background-color: #fff159;
+    background-color: #f5ea6c;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -152,7 +157,7 @@ button {
    /*login*/
 
 .headerlogin{
-    background-color: #fff159;
+    background-color: #f5ea6c;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -160,6 +165,13 @@ button {
    } 
 .headerlogin img{
     width: 100px;
+}
+
+.gradient{
+    background: rgb(250,250,250);
+    background: linear-gradient(180deg, rgba(250,250,250,1) 40%, rgba(241,245,170,1) 70%, rgba(242,239,92,1) 92%);
+    padding: 60px;
+
 }
 
 main #form #form-texto{
@@ -197,5 +209,30 @@ main #form #form-formulario form input{
 
 }
 
+.headerbaixo :hover,
+.descontos :hover,
+.flex :hover,
+.flex2 :hover{
+ padding: 2px;
+
+}
 
 
+/*produto direto*/
+.descri{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 70px;
+    gap: 70px;
+    font-size: 20px;
+}
+.frit img{
+    width: 400px;
+}
+ main .button-compra{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+ }
+ 
